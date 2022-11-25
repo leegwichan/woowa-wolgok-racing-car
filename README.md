@@ -125,10 +125,10 @@ jun : -----
 - [Java 코드 컨벤션 가이드](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/java)를 준수하며 프로그래밍한다.
 - 프로그램 종료 시 `System.exit()`를 호출하지 않는다.
 - 프로그램 구현이 완료되면 ApplicationTest의 모든 테스트가 성공해야 한다. **테스트가 실패할 경우 0점 처리한다.**
-- 추가적으로 우테코 4기 프리코스 1,2,3주차 공통 피드백을 반영하도록 노력할 것
+- 추가적으로 우테코 4기 프리코스 1,2,3주차 공통 피드백을 반영하도록 노력한다.
   - 개인적으로 받은 메일을 참고하거나 [Notion 자료](https://brass-thrush-37b.notion.site/4-b20582ad59f84d348406a8c225ce6186) 참고
 
-
+## 🎱 추가적인 요구사항
 - 함수(또는 메서드)의 길이가 10라인을 넘어가지 않도록 구현한다.
     - 함수(또는 메서드)가 한 가지 일만 잘하도록 구현한다.
 - 메서드의 파라미터 개수는 최대 3개까지만 허용한다.
@@ -178,7 +178,7 @@ public class Car {
 
 ## 📈 과제 진행 요구사항
 
-- 미션은 [java-racingcar-precourse](https://github.com/woowacourse/java-racingcar-precourse) 저장소를 Fork/Clone해 시작한다.
+- 미션은 [woowa-wolgok-racing-car](https://github.com/leegwichan/woowa-wolgok-racing-car) 저장소를 Fork/Clone해 시작한다.
 - **기능을 구현하기 전에 docs/README.md 파일에 구현할 기능 목록을 정리**해 추가한다.
 - **Git의 커밋 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위**로 추가한다.
    - [커밋 메시지 컨벤션](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 가이드를 참고해 커밋 메시지를 작성한다.
