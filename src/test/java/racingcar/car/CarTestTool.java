@@ -1,9 +1,10 @@
-package racingcar.car.moving;
+package racingcar.car;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import racingcar.car.Car;
+import racingcar.car.moving.CarMoving;
 
 public abstract class CarTestTool {
     protected CarMoving alwaysMoveOneSpace() {
