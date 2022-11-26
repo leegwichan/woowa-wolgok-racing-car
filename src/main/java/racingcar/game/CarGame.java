@@ -10,7 +10,7 @@ public class CarGame {
 
     private final List<Car> cars;
 
-    CarGame(List<String> names) {
+    public CarGame(List<String> names) {
         this.cars = CarFactory.createCars(names);
     }
 
