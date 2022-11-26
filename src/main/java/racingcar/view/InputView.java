@@ -19,4 +19,15 @@ public class InputView {
             return readCarNames();
         }
     }
+
+
+    public TryCount readTryCount() {
+        try {
+            String tryCount = Console.readLine();
+            return new TryCount(tryCount);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return readTryCount();
+        }
+    }
 }
