@@ -21,8 +21,8 @@
     - [x] 숫자가 아닌 값이 입력된 경우
 ---
 ## 출력값을 관리하는 클래스 ClassName : OutputView
-- [ ] 파라미터의 Map<String,int> 를 주어진 형식에 맞게 출력 - #printResult()
-  - [ ] 이동한 거리의 숫자만큼 `-` 를 반환하는 기능 : #getMoving()
+- [x] 파라미터의 Map<String,int> 를 주어진 형식에 맞게 출력 - #printResult()
+  - [x] 이동한 거리의 숫자만큼 `-` 를 반환하는 기능 : #getMoving()
 - [ ] 우승자 안내 문구 출력 - #printWinner()
 ---
 ## 이동/정지 값을 가지는 열거형 클래스 ClassName : Movement
