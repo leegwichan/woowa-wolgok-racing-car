@@ -16,9 +16,9 @@
     - [x] 입력값에 공백이 포함된 경우 - #isContainBlank()
     - [x] 한대의 차만 입력된 경우 - #isSingleCar()
     - [x] 이름이 5자 이상인경우 -#isNotValidNameLength()
-- [ ] 시도 횟수 입력 받기 - #insertAttempts()
+- [x] 시도 횟수 입력 받기 - #insertAttempts()
   - 예외처리
-    - [ ] 숫자가 아닌 값이 입력된 경우
+    - [x] 숫자가 아닌 값이 입력된 경우
 ---
 ## 출력값을 관리하는 클래스 ClassName : OutputView
 - [ ] 파라미터의 Map<String,int> 를 주어진 형식에 맞게 출력 - #printResult()

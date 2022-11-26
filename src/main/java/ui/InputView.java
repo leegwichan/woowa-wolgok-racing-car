@@ -22,7 +22,10 @@ public class InputView {
     }
 
     public int insertAttempts() {
-        return 0;
+        String attemptsInput = Console.readLine();
+        isNumeral(attemptsInput);
+
+        return Integer.parseInt(attemptsInput);
     }
 
     private void isContainingComma(String namesInput) {
@@ -51,7 +54,11 @@ public class InputView {
         }
     }
 
-    private void isNumeral() {
-
+    private void isNumeral(String attemptsInput) {
+        try {
+            Integer.parseInt(attemptsInput);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("[ERROR] 시도 횟수는 숫자로 입력되어야 합니다.");
+        }
     }
 }
