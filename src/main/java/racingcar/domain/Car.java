@@ -43,4 +43,8 @@ public class Car {
     public String getCarState() {
         return name.getName()+ Constant.DELIMITER+makeCarState();
     }
+
+    public String getCarName() {
+        return name.toString();
+    }
 }
