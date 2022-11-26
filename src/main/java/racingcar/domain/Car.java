@@ -32,16 +32,8 @@ public class Car implements Comparable<Car> {
         return Randoms.pickNumberInRange(RANDOM_NUMBER_MIN, RANDOM_NUMBER_MAX);
     }
 
-    private String makeCarState() {
-        StringBuilder state = new StringBuilder();
-        for (int i = 0; i < position; i++) {
-            state.append(Constant.MOVE_MARK);
-        }
-        return state.toString();
-    }
-
     public String getCarState() {
-        return name.getName() + Constant.DELIMITER + makeCarState();
+        return name.getName() + Constant.DELIMITER + Constant.MOVE_MARK.repeat(position);
     }
 
     public String getCarName() {
