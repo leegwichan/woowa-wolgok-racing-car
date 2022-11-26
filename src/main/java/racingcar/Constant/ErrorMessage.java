@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.Constant;
 
 public enum ErrorMessage {
     NO_CAR_NAME_ERROR("자동차 이름을 입력해주세요."),
@@ -7,7 +7,7 @@ public enum ErrorMessage {
     NOT_NUMBER("시도 횟수는 숫자를 입력해야 합니다."),
     TRY_COUNT_LENGTH_ERROR("시도 횟수는 1이상 1000이하로 입력해주세요.");
 
-    private final String errorPrefix = "[ERROR]";
+    private final String errorPrefix = "[ERROR] ";
     private final String message;
 
 
