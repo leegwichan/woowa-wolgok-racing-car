@@ -17,13 +17,13 @@ public class Car implements Comparable<Car>{
     }
 
     public void moveForward() {
-        if (canForward()) {
+        int randomNumber = makeRandomNumber();
+        if (canForward(randomNumber)) {
             this.position++;
         }
     }
 
-    public boolean canForward() {
-        int randomNumber = makeRandomNumber();
+    private boolean canForward(int randomNumber) {
         if (randomNumber < CAN_FORWARD_LIMIT) {
             return false;
         }
