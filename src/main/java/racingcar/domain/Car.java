@@ -13,6 +13,20 @@ public class Car {
         this.name = name;
     }
 
+    public void moveForward() {
+        if (canForward()) {
+            this.position++;
+        }
+    }
+
+    public boolean canForward() {
+        int randomNumber = makeRandomNumber();
+        if (randomNumber < CAN_FORWARD_LIMIT) {
+            return false;
+        }
+        return true;
+    }
+
     private int makeRandomNumber() {
         return Randoms.pickNumberInRange(RANDOM_NUMBER_MIN, RANDOM_NUMBER_MAX);
     }
