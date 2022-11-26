@@ -6,6 +6,7 @@ public enum OutputMessage {
     POSITION_MARK("-"),
     WINNER("최종 우승자 : "),
     WINNER_DELIMITER(", ");
+
     private final String message;
 
     OutputMessage(String message) {

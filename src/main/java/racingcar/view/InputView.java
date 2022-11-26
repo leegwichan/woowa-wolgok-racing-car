@@ -13,7 +13,7 @@ public class InputView {
 
     public List<String> readCarName() {
         System.out.println(InputMessage.CAR_NAME.message());
-        return Arrays.stream(Console.readLine().split(InputMessage.CAR_NAME_DELIMITER.message(),-1))
+        return Arrays.stream(Console.readLine().split(InputMessage.CAR_NAME_DELIMITER.message(), -1))
                 .map(String::trim)
                 .collect(Collectors.toList());
     }
