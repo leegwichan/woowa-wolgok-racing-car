@@ -2,6 +2,7 @@ package racingcar;
 
 import domain.Movement;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Car {
@@ -18,6 +19,8 @@ public class Car {
     }
 
     public Map<String, Integer> getNameAndPosition() {
-        return null;
+        Map<String, Integer> carPosition = new HashMap<>();
+        carPosition.put(this.name, this.position);
+        return carPosition;
     }
 }
