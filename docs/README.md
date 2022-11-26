@@ -12,10 +12,10 @@
 ## 입력값을 관리하는 클래스 ClassName : InputView
 - [x] 경주 할 자동차 이름을 입력받기 - #insertCars()
   - 예외처리
-    - [x] `,` 가 포함되지 않은 경우 - #isNotContainingComma()
+    - [x] `,` 가 포함되지 않은 경우 - #isContainingComma()
     - [x] 입력값에 공백이 포함된 경우 - #isContainBlank()
     - [x] 한대의 차만 입력된 경우 - #isSingleCar()
-    - [x] 이름이 5자 이상인경우 -#isNotValidNameLength()
+    - [x] 이름이 5자 이상인경우 -#isValidNameLength()
 - [x] 시도 횟수 입력 받기 - #insertAttempts()
   - 예외처리
     - [x] 숫자가 아닌 값이 입력된 경우
@@ -28,6 +28,9 @@
 - [x] 우승자 안내 문구 출력 - #printWinner()
   - [x] 우승자 관련 출력할 결과물 받기 - #getWinnersResult()
     - [x] 우승자 관련 출력할 결과물 만들기 - #makeWinnersResult()
+- [x] `실행 결과` 텍스트 출력 - #printResultText()
+- [x] 이름 입력 요청 문구 출력 - #askCarNamesInput()
+- [x] 시도 횟수 입력 요청 문구 출력 - #askAttemptsInput()
 ---
 ## 이동/정지 값을 가지는 열거형 클래스 ClassName : Movement
 - 멤버 : MOVE,STOP
