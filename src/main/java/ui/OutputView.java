@@ -11,10 +11,11 @@ public class OutputView {
         for (String name : names) {
             System.out.println(getCarResult(namesAndPositions, name));
         }
+        System.out.println(" ");
     }
 
     public void printWinner(List<String> winners) {
-        String result = "최종 우승자 : ";
+        String result = "최종 우승자 :";
         System.out.println(result + getWinnersResult(winners));
     }
 
