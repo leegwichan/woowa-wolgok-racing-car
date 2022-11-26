@@ -20,7 +20,7 @@ public class RacingGameController {
         List<String> carNames = getCarNames();
         int attempts = getAttempts();
         List<Car> cars = getCars(carNames);
-
+        System.out.println("실행 결과");
         for (int i = 0; i < attempts; i++) {
             doRacingGame(cars);
         }
