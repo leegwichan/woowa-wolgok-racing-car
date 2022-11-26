@@ -1,5 +1,7 @@
 package racingcar;
 
+import java.util.Map;
+
 public class Car {
     private final String name;
     private int position = 0;
@@ -8,5 +10,11 @@ public class Car {
         this.name = name;
     }
 
-    // 추가 기능 구현
+    public void updatePosition() {
+
+    }
+
+    public Map<String, Integer> getNameAndPosition() {
+        return null;
+    }
 }
