@@ -24,6 +24,17 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @DisplayName("random수가 4를 넘을 경우 전진한다.")
+    @Test
+    void moveForwardTest() {
+        assertRandomNumberInRangeTest(
+            () -> {
+                run("a,b", "1");
+                assertThat(output()).contains("a : -", "b : ");
+            },
+            MOVING_FORWARD, STOP
+        );
+    }
     @Test
     void 이름에_대한_예외_처리() {
         assertSimpleTest(
