@@ -19,4 +19,17 @@ class MovementTest {
         Assertions.assertThat(movementByCanMove).isEqualTo(MOVE);
         Assertions.assertThat(movementByCannotMove).isEqualTo(STOP);
     }
+
+    @DisplayName("위치 변경 크기를 반환받는 기능 테스트")
+    @Test
+    void getChangePositionTest() {
+        Movement movementByCanMove = Movement.getMovementByCanMove(true);
+        Movement movementByCannotMove = Movement.getMovementByCanMove(false);
+
+        int movingChangingPosition = Movement.getChangePosition(movementByCanMove);
+        int stopChangingPosition = Movement.getChangePosition(movementByCannotMove);
+
+        Assertions.assertThat(movingChangingPosition).isEqualTo(1);
+        Assertions.assertThat(stopChangingPosition).isEqualTo(0);
+    }
 }
