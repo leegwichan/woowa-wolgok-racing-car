@@ -2,7 +2,7 @@
 
 ## 자동차 게임을 관리하는 클래스 ClassName : RacingGame
 - [ ] 자동차 게임을 진행하는 메서드 - #doCarGame()
-- [ ] 이동 혹은 정지를 판단하는 메서드 - #checkMoveOrNot()
+- [x] 이동 혹은 정지를 판단하는 메서드 - #checkMoveOrNot()
 
 
 ## 자동차의 이름, 현재 위치를 저장하는 클래스 ClassName : Car
