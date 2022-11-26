@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 public class InputView {
 
     private static final int MAXIMUM_NAME_LENGTH = 5;
+    private static final int MINIMUM_ATTEMPT = 1;
 
     public List<String> insertCars() {
         String namesInput = Console.readLine();
@@ -24,8 +25,9 @@ public class InputView {
     public int insertAttempts() {
         String attemptsInput = Console.readLine();
         isNumeral(attemptsInput);
-
-        return Integer.parseInt(attemptsInput);
+        int attempts = Integer.parseInt(attemptsInput);
+        isValidAttempts(attempts);
+        return attempts;
     }
 
     private void isContainingComma(String namesInput) {
@@ -59,6 +61,12 @@ public class InputView {
             Integer.parseInt(attemptsInput);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("[ERROR] 시도 횟수는 숫자로 입력되어야 합니다.");
+        }
+    }
+
+    private void isValidAttempts(int attempts) {
+        if (attempts < MINIMUM_ATTEMPT) {
+            throw new IllegalArgumentException("[ERROR] 시도 횟수는 1 이상의 숫자가 입력되어야 합니다.");
         }
     }
 }

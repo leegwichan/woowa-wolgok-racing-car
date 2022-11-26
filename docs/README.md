@@ -19,6 +19,7 @@
 - [x] 시도 횟수 입력 받기 - #insertAttempts()
   - 예외처리
     - [x] 숫자가 아닌 값이 입력된 경우
+    - [x] 1보다 작은 수가 입력된 경우
 ---
 ## 출력값을 관리하는 클래스 ClassName : OutputView
 - [x] 파라미터의 Map<String,int> 를 주어진 형식에 맞게 출력 - #printResult()
