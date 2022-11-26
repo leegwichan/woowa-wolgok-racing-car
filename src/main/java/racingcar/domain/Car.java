@@ -3,7 +3,9 @@ package racingcar.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.Constant.Constant;
 
-public class Car {
+import java.util.Comparator;
+
+public class Car implements Comparable<Car>{
     private static final int RANDOM_NUMBER_MIN = 0;
     private static final int RANDOM_NUMBER_MAX = 9;
     private static final int CAN_FORWARD_LIMIT = 4;
@@ -46,5 +48,10 @@ public class Car {
 
     public String getCarName() {
         return name.toString();
+    }
+
+    @Override
+    public int compareTo(Car compare) {
+        return compare.position-this.position;
     }
 }
