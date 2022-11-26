@@ -8,4 +8,8 @@ public class OutputView {
         System.out.println(Message.RESULT_MESSAGE);
         System.out.println(raceState);
     }
+
+    public void printWinner(String winnerName) {
+        System.out.printf(Message.WINNER_MESSAGE.toString(), winnerName);
+    }
 }
