@@ -2,6 +2,7 @@ package racingcar.controller;
 
 import racingcar.domain.Cars;
 import racingcar.domain.TryCount;
+import racingcar.domain.Winner;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -13,6 +14,7 @@ public class GameController {
         Cars cars = inputview.readCarNames();
         TryCount tryCount = inputview.readTryCount();
         repeatGame(cars, tryCount.getTryCount());
+        finishRace(cars);
     }
 
     private void repeatGame(Cars cars, int tryCount) {
@@ -20,5 +22,11 @@ public class GameController {
             cars.moveForward();
             outputView.printRaceState(cars.toString());
         }
+    }
+
+    private void finishRace(Cars cars) {
+        Winner winner = cars.getWinner();
+        outputView.printWinner(winner.toString());
+
     }
 }
