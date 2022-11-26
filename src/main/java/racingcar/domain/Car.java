@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.Constant.Constant;
 
 public class Car {
     private static final int RANDOM_NUMBER_MIN = 0;
@@ -29,5 +30,10 @@ public class Car {
 
     private int makeRandomNumber() {
         return Randoms.pickNumberInRange(RANDOM_NUMBER_MIN, RANDOM_NUMBER_MAX);
+    }
+
+    @Override
+    public String toString() {
+        return name.getName()+ Constant.DELIMITER+Constant.MOVE_MARK.repeat(position);
     }
 }
