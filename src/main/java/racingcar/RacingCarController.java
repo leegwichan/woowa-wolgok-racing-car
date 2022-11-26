@@ -2,6 +2,7 @@ package racingcar;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import racingcar.domain.Car;
 import racingcar.domain.RacingGame;
 import racingcar.domain.TrialCount;
@@ -16,10 +17,11 @@ public class RacingCarController {
         RacingGame racingGame = generateGame();
         TrialCount trialCount = getInputTrialCount();
         outputView.printResult();
-        for (int i = 0; i < trialCount.getTrialCount(); i++) {
-            printResultOneTurn(racingGame);
-        }
-        outputView.printWinner(racingGame.winners().stream().map(Car::getName).collect(Collectors.toList()));
+        IntStream.range(0, trialCount.getTrialCount())
+                .forEach(i -> printResultOneTurn(racingGame));
+        outputView.printWinner(racingGame.winners().stream()
+                .map(Car::getName)
+                .collect(Collectors.toList()));
     }
 
     private RacingGame generateGame() {
