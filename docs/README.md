@@ -10,11 +10,12 @@
 - [x] 자동차의 이름과 현재 위치를 반환하는 기능 - #getNameAndPosition()
 ---
 ## 입력값을 관리하는 클래스 ClassName : InputView
-- [ ] 경주 할 자동차 이름을 입력받기 - #insertCars()
+- [x] 경주 할 자동차 이름을 입력받기 - #insertCars()
   - 예외처리
-    - [ ] `,` 가 포함되지 않은 경우 - #isNotContainingComma()
-    - [ ] 한대의 차만 입력된 경우 - #isSingleCar()
-    - [ ] 이름이 공백이거나 5자 이상인경우 -#isNotValidNameLength()
+    - [x] `,` 가 포함되지 않은 경우 - #isNotContainingComma()
+    - [x] 입력값에 공백이 포함된 경우 - #isContainBlank()
+    - [x] 한대의 차만 입력된 경우 - #isSingleCar()
+    - [x] 이름이 5자 이상인경우 -#isNotValidNameLength()
 - [ ] 시도 횟수 입력 받기 - #insertAttempts()
   - 예외처리
     - [ ] 숫자가 아닌 값이 입력된 경우
