@@ -1,7 +1,6 @@
 package racingcar.view.output;
 
 import racingcar.car.dto.CarDto;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,21 +29,21 @@ public class OutputView extends OutputViewText{
     }
 
     private List<CarDto> getWinners(List<CarDto> carDtos) {
-        int maxPosition = 0;
-        List<CarDto> winners = new ArrayList<>();
+        int maxPosition = getMaxPosition(carDtos);
+        return getEqualPosition(carDtos, maxPosition);
+    }
 
-        for (CarDto carDto : carDtos) {
-            if (carDto.getPosition() > maxPosition) {
-                winners = new ArrayList<>();
-                maxPosition = carDto.getPosition();
-                winners.add(carDto);
-                continue;
-            }
-            if (carDto.getPosition() == maxPosition) {
-                winners.add(carDto);
-            }
-        }
-        return winners;
+    private int getMaxPosition(List<CarDto> carDtos) {
+        return carDtos.stream()
+                .map(carDto -> carDto.getPosition())
+                .mapToInt(i -> i)
+                .max().orElse(0);
+    }
+
+    private List<CarDto> getEqualPosition(List<CarDto> carDtos, int position) {
+        return carDtos.stream()
+                .filter(carDto -> carDto.getPosition() == position)
+                .collect(Collectors.toList());
     }
 
     private void printWinners(List<CarDto> carDtos) {
