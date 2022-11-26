@@ -13,16 +13,16 @@ public class InputView {
         return 0;
     }
 
-    private String inputContent(InputViewData data) {
+    private String readContent(InputViewData data) {
         try {
-            return tryInputContent(data);
+            return tryReadContent(data);
         } catch (IllegalArgumentException exception) {
             print(exception.getMessage());
-            return inputContent(data);
+            return readContent(data);
         }
     }
 
-    private String tryInputContent(InputViewData data) {
+    private String tryReadContent(InputViewData data) {
         print(data.getRequestMessage());
         String input = Console.readLine();
 
