@@ -19,6 +19,17 @@ public class Cars {
                 .forEach(car -> car.moveForward());
     }
 
+    public Winner getWinner() {
+        Car maxPositionCar = getMaxPositionCar();
+        return new Winner(cars.stream()
+                .filter(car -> car.compareTo(maxPositionCar) == 0)
+                .collect(Collectors.toList()));
+    }
+
+    private Car getMaxPositionCar() {
+        return cars.stream().sorted().findFirst().get();
+    }
+
     @Override
     public String toString() {
         StringBuilder raceResult = new StringBuilder();
