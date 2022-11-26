@@ -39,3 +39,5 @@
 ---
 ## 난수를 생성하는 클래스 ClassName : NumberGenerator
 - [x] 0~9 사이의 난수를 생성하는 클래스 -#createRandomNumber()
+---
+## 예외 문구 관리 클래스 ClassName : ErrorMessage
