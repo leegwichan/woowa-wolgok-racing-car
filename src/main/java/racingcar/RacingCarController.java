@@ -16,7 +16,7 @@ public class RacingCarController {
         RacingGame racingGame = generateGame();
         TrialCount trialCount = getInputTrialCount();
         outputView.printResult();
-        for (int i=0;i<trialCount.getTrialCount();i++){
+        for (int i = 0; i < trialCount.getTrialCount(); i++) {
             printResultOneTurn(racingGame);
         }
         outputView.printWinner(racingGame.winners().stream().map(Car::getName).collect(Collectors.toList()));
@@ -48,13 +48,13 @@ public class RacingCarController {
         }
     }
 
-    private void printResultOneTurnByCar(List<Car> cars){
-        cars.forEach(car -> outputView.printResultByCar(car.getName(), car.getPosition()));
-    }
-
-    private void printResultOneTurn(RacingGame racingGame){
+    private void printResultOneTurn(RacingGame racingGame) {
         racingGame.playOneTurn();
         printResultOneTurnByCar(racingGame.getCars());
         outputView.printEmptyLine();
+    }
+
+    private void printResultOneTurnByCar(List<Car> cars) {
+        cars.forEach(car -> outputView.printResultByCar(car.getName(), car.getPosition()));
     }
 }
