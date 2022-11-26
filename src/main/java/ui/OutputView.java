@@ -5,6 +5,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class OutputView {
+    private static final String RESULT_TEXT = "실행 결과";
+    private static final String ASK_CAR_NAMES_TEXT = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분";
+    private static final String ASK_ATTEMPTS_TEXT = "시도할 회수는 몇회인가요?";
     private static final String EMPTY_LETTER = " ";
     private static final String SEPARATOR = " : ";
     private static final String MOVE_EXPRESSION = "-";
@@ -21,6 +24,18 @@ public class OutputView {
 
     public void printWinner(List<String> winners) {
         System.out.println(WINNER_TEXT + getWinnersResult(winners));
+    }
+
+    public void printResultText() {
+        System.out.println(RESULT_TEXT);
+    }
+
+    public void askCarNamesInput() {
+        System.out.println(ASK_CAR_NAMES_TEXT);
+    }
+
+    public void askAttemptsInput() {
+        System.out.println(ASK_ATTEMPTS_TEXT);
     }
 
     private String getCarResult(Map<String, Integer> namesAndPositions, String name) {

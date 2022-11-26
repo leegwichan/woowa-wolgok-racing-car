@@ -20,7 +20,7 @@ public class RacingGameController {
         List<String> carNames = getCarNames();
         int attempts = getAttempts();
         List<Car> cars = getCars(carNames);
-        System.out.println("실행 결과");
+        outputView.printResultText();
         for (int i = 0; i < attempts; i++) {
             doRacingGame(cars);
         }
@@ -28,7 +28,7 @@ public class RacingGameController {
     }
 
     private List<String> getCarNames() {
-        System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분");
+        outputView.askCarNamesInput();
         while (true) {
             try {
                 return inputView.insertCars();
@@ -39,7 +39,7 @@ public class RacingGameController {
     }
 
     private int getAttempts() {
-        System.out.println("시도할 회수는 몇회인가요?");
+        outputView.askAttemptsInput();
         while (true) {
             try {
                 return inputView.insertAttempts();
