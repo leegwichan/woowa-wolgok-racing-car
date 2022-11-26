@@ -7,7 +7,6 @@ import racingcar.domain.Cars;
 import racingcar.domain.TryCount;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class InputView {
@@ -15,14 +14,22 @@ public class InputView {
         System.out.println(Message.READ_CAR_NAME_MESSAGE);
         try {
             String carNames = Console.readLine();
-            return new Cars(Arrays.stream(carNames.split(","))
-                    .map(CarName::new).collect(Collectors.toList()));
+            return makeCars(carNames);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return readCarNames();
         }
     }
 
+    private Cars makeCars(String carNames) {
+        try {
+            return new Cars(Arrays.stream(carNames.split(","))
+                    .map(CarName::new)
+                    .collect(Collectors.toList()));
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException(e.getMessage());
+        }
+    }
 
     public TryCount readTryCount() {
         System.out.println(Message.READ_TRY_COUNT_MESSAGE);
