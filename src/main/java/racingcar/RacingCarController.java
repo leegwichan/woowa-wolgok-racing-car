@@ -38,4 +38,13 @@ public class RacingCarController {
         }
     }
 
+    private void printResultOneTurnByCar(List<Car> cars){
+        cars.forEach(car -> outputView.printResultByCar(car.getName(), car.getPosition()));
+    }
+
+    private void printResultOneTurn(RacingGame racingGame){
+        racingGame.playOneTurn();
+        printResultOneTurnByCar(racingGame.getCars());
+        outputView.printEmptyLine();
+    }
 }
