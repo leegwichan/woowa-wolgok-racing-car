@@ -12,6 +12,16 @@ public class RacingCarController {
     private final InputView inputView = InputView.getInstance();
     private final OutputView outputView = OutputView.getInstance();
 
+    public void run() {
+        RacingGame racingGame = generateGame();
+        TrialCount trialCount = getInputTrialCount();
+        outputView.printResult();
+        for (int i=0;i<trialCount.getTrialCount();i++){
+            printResultOneTurn(racingGame);
+        }
+        outputView.printWinner(racingGame.winners().stream().map(Car::getName).collect(Collectors.toList()));
+    }
+
     private RacingGame generateGame() {
         while (true) {
             try {
