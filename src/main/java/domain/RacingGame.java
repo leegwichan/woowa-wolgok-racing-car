@@ -9,8 +9,7 @@ public class RacingGame {
 
     }
 
-    public Movement checkMoveOrNot() {
-        int randomNumber = NumberGenerator.createRandomNumber();
+    public Movement checkMoveOrNot(int randomNumber) {
         boolean canMove = canMove(randomNumber);
         return Movement.getMovementByCanMove(canMove);
     }
