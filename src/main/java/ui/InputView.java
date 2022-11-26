@@ -12,12 +12,12 @@ public class InputView {
 
     public List<String> insertCars() {
         String namesInput = Console.readLine();
-        isNotContainingComma(namesInput);
+        isContainingComma(namesInput);
         isContainingBlack(namesInput);
 
         List<String> names = Arrays.stream(namesInput.split(",")).collect(Collectors.toList());
         isSingleCar(names);
-        isNotValidNameLength(names);
+        isValidNameLength(names);
         return names;
     }
 
@@ -25,7 +25,7 @@ public class InputView {
         return 0;
     }
 
-    private void isNotContainingComma(String namesInput) {
+    private void isContainingComma(String namesInput) {
         if (!namesInput.contains(",")) {
             throw new IllegalArgumentException("[ERROR] 각 자동차의 입력은 쉼표(,) 로 구분되어야 합니다.");
         }
@@ -43,7 +43,7 @@ public class InputView {
         }
     }
 
-    private void isNotValidNameLength(List<String> names) {
+    private void isValidNameLength(List<String> names) {
         boolean isValidNameLength = names.stream()
                 .allMatch(name -> name.length() <= MAXIMUM_NAME_LENGTH);
         if (!isValidNameLength) {
@@ -51,7 +51,7 @@ public class InputView {
         }
     }
 
-    private void isNotNumeral() {
+    private void isNumeral() {
 
     }
 }
