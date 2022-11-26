@@ -33,6 +33,22 @@ public class ExceptionTest extends NsTest {
         });
     }
 
+    @DisplayName("시도 횟수 입력에 대한 예외처리 후 정상적인 값 입력 시 정상실행 테스트")
+    @CsvSource("0,a,-1,3")
+    @ParameterizedTest
+    void enterValidAttemptsAfterInvalidTest(
+            String invalidAttemptsInput1,
+            String invalidAttemptsInput2,
+            String invalidAttemptsInput3,
+            String validAttemptsInput
+    ) {
+        assertSimpleTest(() -> {
+            runException("pobi,ho", invalidAttemptsInput1, invalidAttemptsInput2, invalidAttemptsInput3, validAttemptsInput);
+            assertThat(output()).contains(ERROR_MESSAGE);
+            assertThat(output()).contains("실행 결과");
+        });
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
