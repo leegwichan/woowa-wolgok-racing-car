@@ -1,5 +1,7 @@
 package racingcar;
 
+import domain.Movement;
+
 import java.util.Map;
 
 public class Car {
@@ -10,8 +12,9 @@ public class Car {
         this.name = name;
     }
 
-    public void updatePosition() {
-
+    public void updatePosition(Movement movement) {
+        int changePosition = Movement.getChangePosition(movement);
+        position += changePosition;
     }
 
     public Map<String, Integer> getNameAndPosition() {

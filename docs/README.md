@@ -6,7 +6,7 @@
 
 
 ## 자동차의 이름, 현재 위치를 저장하는 클래스 ClassName : Car
-- [ ] 자동차의 이동/혹은 정지를 관리하는 기능 - #updatePosition()
+- [x] 자동차의 위치 변경을 관리하는 기능 - #updatePosition()
 - [ ] 자동차의 이름과 현재 위치를 반환하는 기능 - #getNameAndPosition()
 ---
 ## 입력값을 관리하는 클래스 ClassName : InputView
