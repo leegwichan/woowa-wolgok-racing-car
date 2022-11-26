@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class OutputView extends OutputViewText{
 
     public void printCarsProgress(List<CarDto> carDtos) {
+        print("");
         for (CarDto carDto : carDtos) {
             printCarProgress(carDto);
         }
@@ -24,6 +25,7 @@ public class OutputView extends OutputViewText{
 
     public void printResult(List<CarDto> carDto) {
         List<CarDto> winners = getWinners(carDto);
+        print("");
         printWinners(winners);
     }
 
