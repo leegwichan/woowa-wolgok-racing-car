@@ -9,8 +9,10 @@ public enum InputViewData {
                     && Arrays.stream(string.split(","))
                     .map(name -> 1 <= name.length() && name.length() <= 5)
                     .reduce(true, Boolean::logicalAnd),
-            "[ERROR] 자동차 이름 입력 형식과 일치하지 않습니다.");
-
+            "[ERROR] 자동차 이름 입력 형식과 일치하지 않습니다."),
+    COUNT_OF_TRY("시도할 회수는 몇회인가요?",
+            string -> Integer.parseInt(string) > 0,
+            "[ERROR] 시도 횟수는 숫자여야 한다.");
     private String requestMessage;
     private Predicate<String> formCheck;
     private String errorMessage;

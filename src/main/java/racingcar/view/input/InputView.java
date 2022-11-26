@@ -12,7 +12,8 @@ public class InputView {
     }
 
     public int readCountOfTry() {
-        return 0;
+        String content = readContent(InputViewData.COUNT_OF_TRY);
+        return Integer.parseInt(content);
     }
 
     private String readContent(InputViewData data) {
