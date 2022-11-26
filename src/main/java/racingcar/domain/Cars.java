@@ -23,7 +23,7 @@ public class Cars {
     public String toString() {
         StringBuilder raceResult = new StringBuilder();
         this.cars.stream()
-                .forEach(car -> raceResult.append(car.toString()+ Constant.ENTER));
+                .forEach(car -> raceResult.append(car.getCarState() + Constant.ENTER));
         return raceResult.toString();
     }
 }

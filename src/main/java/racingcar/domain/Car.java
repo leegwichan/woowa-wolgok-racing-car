@@ -40,8 +40,7 @@ public class Car {
         return state.toString();
     }
 
-    @Override
-    public String toString() {
+    public String getCarState() {
         return name.getName()+ Constant.DELIMITER+makeCarState();
     }
 }
