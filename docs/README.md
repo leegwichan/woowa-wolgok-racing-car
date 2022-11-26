@@ -1,7 +1,7 @@
 #기능 목록
 
 ## 자동차 게임을 관리하는 클래스 ClassName : RacingGame
-- [ ] 자동차 게임을 진행하는 메서드 - #doCarGame()
+- [x] 자동차 게임을 진행하는 메서드 - #doRacingGame()
 - [x] 이동 혹은 정지를 판단하는 메서드 - #checkMoveOrNot()
 
 

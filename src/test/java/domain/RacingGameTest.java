@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static domain.Movement.MOVE;
 import static domain.Movement.STOP;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RacingGameTest {
 
