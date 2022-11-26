@@ -27,7 +27,7 @@
 ## 이동/정지 값을 가지는 열거형 클래스 ClassName : Movement
 - 멤버 : MOVE,STOP
 - [x] 이동 가능 여부로 Movement 를 반환받을 수 있는 기능 - #getMovementByCanMove()
-- [ ] 멤버의 위치 변경 크기 받기 - #getChangePosition()
+- [x] 멤버의 위치 변경 크기 받기 - #getChangePosition()
 ---
 ## 난수를 생성하는 클래스 ClassName : NumberGenerator
 - [x] 0~9 사이의 난수를 생성하는 클래스 -#createRandomNumber()

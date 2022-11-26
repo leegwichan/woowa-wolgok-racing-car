@@ -19,4 +19,8 @@ public enum Movement {
                 .filter(movement -> movement.canMove == canMove)
                 .findAny().get();
     }
+
+    public static int getChangePosition(Movement movement) {
+        return movement.changePosition;
+    }
 }
