@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
@@ -31,10 +32,10 @@ public class RacingGame {
 
     public List<Car> winners() {
         int max = cars.stream().mapToInt(Car::getPosition).max().orElseThrow(NoSuchElementException::new);
-        return cars.stream().filter(car -> car.getPosition() == max).collect(Collectors.toList());
+        return cars.stream().filter(car -> car.getPosition() == max).collect(Collectors.toUnmodifiableList());
     }
 
     public List<Car> getCars() {
-        return cars;
+        return Collections.unmodifiableList(cars);
     }
 }
