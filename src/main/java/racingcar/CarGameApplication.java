@@ -21,11 +21,15 @@ public class CarGameApplication {
         int countOfTry = inputView.readCountOfTry();
 
         carGame = new CarGame(carNames);
+        
+        moveRepeat(countOfTry);
+        outputView.printResult(carGame.getCarDtos());
+    }
+
+    public void moveRepeat(int countOfTry) {
         for (int count = 1; count <= countOfTry; count++) {
             carGame.move();
             outputView.printCarsProgress(carGame.getCarDtos());
         }
-
-        outputView.printResult(carGame.getCarDtos());
     }
 }
