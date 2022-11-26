@@ -12,7 +12,7 @@ public class Winner {
 
     @Override
     public String toString() {
-        StringJoiner winnerName = new StringJoiner(",");
+        StringJoiner winnerName = new StringJoiner(", ");
         winnerCars.stream()
                 .forEach(car -> winnerName.add(car.getCarName()));
         return winnerName.toString();
