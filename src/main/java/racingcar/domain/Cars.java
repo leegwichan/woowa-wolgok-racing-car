@@ -11,4 +11,9 @@ public class Cars {
                 .map(Car::new)
                 .collect(Collectors.toList());
     }
+
+    public void moveForward() {
+        this.cars.stream()
+                .forEach(car -> car.moveForward());
+    }
 }
