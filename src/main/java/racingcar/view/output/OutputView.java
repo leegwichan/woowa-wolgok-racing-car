@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class OutputView extends OutputViewText{
 
     public void printCarsProgress(List<CarDto> carDtos) {
-        print("");
+        print(BLANK_LINE);
         for (CarDto carDto : carDtos) {
             printCarProgress(carDto);
         }
@@ -17,15 +17,15 @@ public class OutputView extends OutputViewText{
     private void printCarProgress(CarDto carDto) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(carDto.getName())
-                .append(" : ")
-                .append("-".repeat(carDto.getPosition()));
+                .append(CAR_PROGRESS_FROM)
+                .append(POSITION.repeat(carDto.getPosition()));
 
         print(stringBuilder);
     }
 
     public void printResult(List<CarDto> carDto) {
         List<CarDto> winners = getWinners(carDto);
-        print("");
+        print(BLANK_LINE);
         printWinners(winners);
     }
 
@@ -50,8 +50,8 @@ public class OutputView extends OutputViewText{
     private void printWinners(List<CarDto> carDtos) {
         String winners = carDtos.stream()
                 .map(carDto -> carDto.getName())
-                .collect(Collectors.joining(", "));
-        System.out.println("최종 우승자 : " + winners);
+                .collect(Collectors.joining(WINNER_DELIMITER));
+        System.out.println(WINNER_COMMENT + winners);
     }
 
     private void print(StringBuilder sb) {
