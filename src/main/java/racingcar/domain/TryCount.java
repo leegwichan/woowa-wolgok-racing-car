@@ -45,4 +45,8 @@ public class TryCount {
             throw new IllegalArgumentException(ErrorMessage.TRY_COUNT_LENGTH_ERROR.getMessage());
         }
     }
+
+    public int getTryCount() {
+        return tryCount;
+    }
 }
