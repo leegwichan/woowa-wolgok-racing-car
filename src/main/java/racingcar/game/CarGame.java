@@ -4,6 +4,7 @@ import racingcar.car.Car;
 import racingcar.car.dto.CarDto;
 import racingcar.factory.CarFactory;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CarGame {
 
@@ -20,6 +21,8 @@ public class CarGame {
     }
 
     public List<CarDto> getCarDtos() {
-        return null;
+        return cars.stream()
+                .map(car -> car.getCarDto())
+                .collect(Collectors.toList());
     }
 }
