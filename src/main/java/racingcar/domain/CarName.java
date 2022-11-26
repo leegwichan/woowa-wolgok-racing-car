@@ -15,7 +15,7 @@ public class CarName {
     }
 
     private void validCarNameEmpty(String name) {
-        if (name.length() < CAR_NAME_LENGTH_MIN) {
+        if (name.trim().length() < CAR_NAME_LENGTH_MIN) {
             throw new IllegalArgumentException(ErrorMessage.NO_CAR_NAME_ERROR.getMessage());
         }
     }
