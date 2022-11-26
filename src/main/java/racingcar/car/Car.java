@@ -1,5 +1,6 @@
 package racingcar.car;
 
+import racingcar.car.dto.CarDto;
 import racingcar.car.moving.CarMoving;
 import racingcar.car.moving.NormalCarMoving;
 
@@ -14,12 +15,14 @@ public class Car {
 
     public Car(String name, CarMoving carMoving) {
         this.name = name;
-        this.carMoving = new NormalCarMoving();
+        this.carMoving = carMoving;
     }
 
     public void move() {
         position += carMoving.countOfMovingSpace();
     }
 
-    // 추가 기능 구현
+    public CarDto getCarDto() {
+        return new CarDto(name, position);
+    }
 }
