@@ -22,6 +22,16 @@ public class ExceptionTest extends NsTest {
         });
     }
 
+    @DisplayName("시도 횟수 입력에 대한 예외처리 테스트")
+    @ValueSource(strings = {"0", "-1", "d"})
+    @ParameterizedTest
+    void enterInvalidMovingBlockTest(String input) {
+        assertSimpleTest(() -> {
+            runException("pobi,java", input);
+            assertThat(output()).contains(ERROR_MESSAGE);
+        });
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
