@@ -1,9 +1,15 @@
 package racingcar.view.input;
 
+import java.util.Arrays;
 import java.util.function.Predicate;
 
 public enum InputViewData {
-    ;
+    CAR_NAMES("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)",
+            string -> string.split(",").length != 0
+                    && Arrays.stream(string.split(","))
+                    .map(name -> 1 <= name.length() && name.length() <= 5)
+                    .reduce(true, Boolean::logicalAnd),
+            "[ERROR] 자동차 이름 입력 형식과 일치하지 않습니다.");
 
     private String requestMessage;
     private Predicate<String> formCheck;

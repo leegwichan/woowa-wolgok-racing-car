@@ -1,12 +1,14 @@
 package racingcar.view.input;
 
 import camp.nextstep.edu.missionutils.Console;
+import java.util.Arrays;
 import java.util.List;
 
 public class InputView {
 
     public List<String> readCarNames() {
-        return null;
+        String content = readContent(InputViewData.CAR_NAMES);
+        return Arrays.asList(content.split(","));
     }
 
     public int readCountOfTry() {
