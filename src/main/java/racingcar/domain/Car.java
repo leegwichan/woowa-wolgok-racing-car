@@ -1,11 +1,8 @@
 package racingcar.domain;
 
-import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.Constant.Constant;
 
 public class Car implements Comparable<Car> {
-    private static final int RANDOM_NUMBER_MIN = 0;
-    private static final int RANDOM_NUMBER_MAX = 9;
     private static final int CAN_FORWARD_LIMIT = 4;
     private final CarName name;
     private int position = 0;
@@ -14,8 +11,7 @@ public class Car implements Comparable<Car> {
         this.name = name;
     }
 
-    public void moveForward() {
-        int randomNumber = makeRandomNumber();
+    public void moveForward(int randomNumber) {
         if (canForward(randomNumber)) {
             this.position++;
         }
@@ -26,10 +22,6 @@ public class Car implements Comparable<Car> {
             return false;
         }
         return true;
-    }
-
-    private int makeRandomNumber() {
-        return Randoms.pickNumberInRange(RANDOM_NUMBER_MIN, RANDOM_NUMBER_MAX);
     }
 
     public String getCarState() {

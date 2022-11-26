@@ -1,11 +1,14 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.Constant.Constant;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cars {
+    private static final int RANDOM_NUMBER_MIN = 0;
+    private static final int RANDOM_NUMBER_MAX = 9;
     private final List<Car> cars;
 
     public Cars(List<CarName> carNames) {
@@ -16,7 +19,11 @@ public class Cars {
 
     public void moveForward() {
         this.cars.stream()
-                .forEach(car -> car.moveForward());
+                .forEach(car -> car.moveForward(makeRandomNumber()));
+    }
+
+    private int makeRandomNumber() {
+        return Randoms.pickNumberInRange(RANDOM_NUMBER_MIN, RANDOM_NUMBER_MAX);
     }
 
     public Winner getWinner() {
