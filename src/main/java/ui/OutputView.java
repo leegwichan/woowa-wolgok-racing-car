@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class OutputView {
 
-    public void printResult(Map<String,Integer> namesAndPositions) {
+    public void printResult(Map<String, Integer> namesAndPositions) {
         Set<String> names = namesAndPositions.keySet();
         for (String name : names) {
             System.out.println(getCarResult(namesAndPositions, name));

@@ -3,7 +3,7 @@ package domain;
 import java.util.Arrays;
 
 public enum Movement {
-    MOVE(true,1),
+    MOVE(true, 1),
     STOP(false, 0);
 
     private final boolean canMove;
